@@ -83,7 +83,7 @@ the readme will list any important changes.
 
   @if(wc_get_loop_prop('total'))
     <div class="container" data-cursor-text="scroll">
-      <div class="columns is-multiline">
+      <div class="columns is-multiline" data-inertia data-inertia-delay data-inertia-delay="200">
         @while(have_posts())
           @php
             the_post();

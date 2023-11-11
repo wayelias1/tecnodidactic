@@ -21,10 +21,10 @@
                 </div>
                 <div class="carrusel splide">
                     <div class="is-flex">
-                      <div class="has-background-danger">{!!get_field('hero-content-1', 'options')!!}</div>
-                      <div class="has-background-primary">{!!get_field('hero-content-2', 'options')!!}</div>
-                      <div class="has-background-success">{!!get_field('hero-content-3', 'options')!!}</div>
-                      <div class="has-background-grey">{!!get_field('hero-content-4', 'options')!!}</div>
+                      <div class="button is-rounded is-borderless is-danger">{!!get_field('hero-content-1', 'options')!!}</div>
+                      <div class="button is-rounded is-borderless is-primary">{!!get_field('hero-content-2', 'options')!!}</div>
+                      <div class="button is-rounded is-borderless is-success">{!!get_field('hero-content-3', 'options')!!}</div>
+                      <div class="button is-rounded is-borderless is-grey">{!!get_field('hero-content-4', 'options')!!}</div>
                     </div>
                 </div>
               </div>
@@ -33,8 +33,7 @@
               <div class="has-padding-20">
                 <div class="navbar has-padding-20">
                   <div class="navbar-start">
-                    <div class="navbar-item is-size-6 button is-borderless"><i class="has-margin-right-10" data-feather="circle" width="16px" height="16px"></i>Explorar por categoria</div>
-                    <div class="navbar-item is-size-6 button is-borderless"><i class="has-margin-right-10" data-feather="circle" width="16px" height="16px"></i>Explorar todo</div>
+                    <div class="navbar-item is-size-6 button is-borderless"><a class="is-flex is-align-items-center" href="http://tecnodidactic.test/tienda"><i class="has-margin-right-10" data-feather="circle" width="16px" height="16px"></i>Explorar todo</a></div>
                   </div>
                   <div class="navbar-end">
                     <div class="navbar-item is-size-6 button is-borderless">Cotización<div><i class="has-margin-left-5" data-feather="file-text" width="16px" height="16px"></i></div></div>

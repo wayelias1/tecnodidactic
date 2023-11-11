@@ -39,6 +39,8 @@ class ThemeServiceProvider extends ServiceProvider
         Blade::directive('productcat', function ($product) {
             return "<?php echo wc_get_product_category_list( $product, ', ', '', '' ); ?>";
         });
-
+        Blade::directive('productcatlist', function ($product) {
+            return "<?php echo get_the_terms_list( $product, 'product_cat' ,', ', '', '' ); ?>";
+        });
     }
 }

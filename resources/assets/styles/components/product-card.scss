@@ -19,6 +19,8 @@
         mix-blend-mode: darken;
         transition: ease-out .3s;
         object-fit: contain;
+        object-position: center;
+        height: 100%;
 
         &.empty-state {
             opacity: 0.3;

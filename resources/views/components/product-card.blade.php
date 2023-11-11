@@ -29,38 +29,35 @@
     </div>
     <div class="product-caption has-padding-30">
       <div class="columns is-mobile is-paddingless">
-        <div class="column is-10">
+        <div class="column is-8">
           <div class="product-category">
-            @set($terms, get_the_terms($product->get_id(), 'product_cat'))
-            @set($colors, get_field('colors_per_category', 'options'))
-
-            @foreach ($terms as $term)
-              @if($term->name !== 'Sin categorizar')
-                @set($color, array_search($term->term_id, array_column($colors, 'category')))
-                  <span class="is-size-6 tag is-rounded {{@$colors[$color]['color']}}">
+            @set($categories, get_the_terms($product->get_id(),'product_cat'))
+            @foreach ($categories as $cat)
+              @if($cat->name !== 'Sin categorizar')
+                @set($color, get_field('colors_per_category', 'product_cat_'.$cat->term_id))
+                  <span class="is-size-6 tag is-rounded {{$color}}">
                       <b>
-                      <a href="/categoria-producto/{{$term->slug}}">{{$term->name}}</a>              
+                        <a href="/categoria-producto/{{$cat->slug}}">{{$cat->name}}</a>
                     </b>
                   </span><br>
-                  
               @endif
-              {{-- <span class="is-size-6 "><b>@productcat($product->get_id())</b></span><br> --}}
             @endforeach
+
           </div>
           <a href="@permalink" class="has-text-dark is-block is-size-6" style="margin-top: 3px;"><b>@title</b></a>
         </div>
-        {{-- <div class="column is-4 has-text-right">
+        <div class="column is-4 has-text-right">
           @if($product->get_gallery_image_ids())
             <x-product-slide-controls />
           @else
-            <span data-cursor-text=" " data-cursor="-hidden" class="icon is-small has-text-grey">
+            <span data-cursor-text=" " data-cursor="-hidden" class="icon is-small has-text-dark">
               <i data-feather="circle" style="stroke-width: 2.5"></i>
             </span>
           @endif
-          <div class="price has-text-weight-bold is-size-6">
+          {{-- <div class="price has-text-weight-bold is-size-6">
             <x-price />
-          </div>
-        </div> --}}
+          </div> --}}
+        </div>
       </div>
     </div>
   </article>
