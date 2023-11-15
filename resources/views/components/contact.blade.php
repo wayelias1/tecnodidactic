@@ -11,14 +11,14 @@
                                     <span class="icon">
                                         <i data-feather="mail"></i>
                                     </span>
-                                    <span>escribenos</span>
+                                    <span>Escríbenos</span>
                                 </a>
                                 <span class="has-padding-20"> ó </span>
                                 <a href="tel:+1 555 55 55" class="button is-light is-rounded has-text-info is-half-width is-justify-content-space-around">
                                     <span class="icon">
                                         <i data-feather="phone"></i>
                                     </span>
-                                    <span class="telefono">Llamanos</span>
+                                    <span class="telefono">Llámanos</span>
                                 </a>
                             </div>
                         </div>

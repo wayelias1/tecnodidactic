@@ -4,7 +4,7 @@
             <h3 class="title is-size-1 has-text-centered"><b>Nuestros equipamientos</b></h3>
             <div class="has-margin-bottom-30"><p class="has-text-centered">{!!get_field('equipamiento-title', 'options')!!}</p></div>
             <div class="columns" style="height: 150vh" data-inertia data-inertia-reveal data-delay="200">
-                <div class="column is-6">
+                <div class="column is-6 is-half-height-mobile">
                     <div class="card section box is-flex is-align-items-flex-end" style="background-image: url({!!get_field('equipamiento-box-img-1', 'options')!!}); background-size: cover; height:40%">
                         <div class="is-overlay"></div>
                         <div class="content is-flex is flex-column is-justify-content-space-evenly is-align-items-flex-start" style="height: 40%">
@@ -24,7 +24,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column is-6">
+                <div class="column is-6 is-half-height-mobile">
                     <div class="card section box is-flex is-align-items-flex-end" style="background-image: url({!!get_field('equipamiento-box-img-2', 'options')!!}); background-size: cover; height:55%">
                         <div class="is-overlay"></div>
                         <div class="content is-flex is flex-column is-justify-content-space-evenly is-align-items-flex-start" style="height: 40%">

@@ -35,3 +35,4 @@ export default {
     window.inertia.init(window.inertia.setup);
   },
 };
+  

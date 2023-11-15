@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="navbar" data-inertia data-inertia-reveal data-delay="200" style="background: none">
+  <div class="navbar has-margin-top-20 has-margin-bottom-20" data-inertia data-inertia-reveal data-delay="200" style="background: none">
     <div class="navbar-start">
       <a href="http://tecnodidactic.test">
         <img class="navbar-item" src="{!!get_field('hero-logo', 'options')!!}" alt="Tecnodidactic logo">

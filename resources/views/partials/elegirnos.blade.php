@@ -12,7 +12,7 @@
                     </div>
                     <div class="" style="min-height: 280px; position: relative">
                         <div class="box minibox box-1 has-background-info">Ciencia</div>
-                        <div class="box minibox box-2 has-background-danger">Tecnologia</div>
+                        <div class="box minibox box-2 has-background-danger">Tecnología</div>
                     </div>
                 </div>
                 <div class="column is-4">
@@ -32,7 +32,7 @@
                 <div class="column is-4">
                     <div class="" style="min-height: 280px; position: relative">
                         <div class="box minibox box-3 has-background-success">Aprendizaje</div>
-                        <div class="box minibox box-4 has-background-primary">Educacion</div>
+                        <div class="box minibox box-4 has-background-primary">Educación</div>
                     </div>
                     <div class="box card is-flex flex-column is-justify-content-space-around is-align-items-center" style="min-height: 300px">
                         <figure class="image is-96x96">

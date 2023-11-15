@@ -28,14 +28,9 @@ the readme will list any important changes.
         <div class="woocomerce-title has-text-centered has-padding-bottom-40">
           <h1 class="title is-size-1 has-text-weight-bold">Equipamiento tecnológico y sistemas de entrenamiento</h1>
         </div>
-        <div class="field is-flex has-padding-bottom-40">
-          <div class="control has-icons-left is-full-width">
-            <input class="input is-rounded is-borderless is-full-width" type="text" placeholder="Escribe el nombre de un producto o buscar una palabra clave...">
-            <span class="icon is-small is-left has-text-info">
-              <i data-feather="search"></i>
-            </span>
-          </div>
-        </div>
+        
+            @include('forms.search')
+
         <ul class="is-flex woocomerce-explorer is-justify-content-center">
           @php
           do_action('top_level_product_categories_list');
@@ -45,6 +40,9 @@ the readme will list any important changes.
           ) );
             // echo '<ul>';
             foreach ( $terms as $term ) {
+              if ($term->name === 'Sin categorizar') {
+                $term->name = 'Todo';
+              }
               echo '<li class="button is-rounded is-borderless"><a href="' . esc_url( get_term_link( $term ) ) . '">' . $term->name . '</a></li>';
             }
             // echo '</ul>';

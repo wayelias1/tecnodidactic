@@ -1,34 +1,58 @@
 <div class="hero is-fullheight">
     <div class="hero-body is-align-items-flex-start">
         <div class="container">
-          {{-- @include('components.navigation') --}}
-          <div class="columns has-margin-top-20 is-multiline" data-inertia data-inertia-reveal data-delay="200">
+          <div class="columns is-multiline" data-inertia data-inertia-reveal data-delay="200">
             <div class="column is-5 has-background-primary card">
               <div class="section is-medium m-0">
                 <h1 class="title is-1">{!!get_field('hero-title', 'options')!!}</h1>
               </div>
             </div>
-            <div class="column is-7 has-background-info card">
-              <div class="is-flex flex-column is-full-height section">
-                <div class="tile is-ancestor has-padding-bottom-30">
-                  <div class="tile is-parent" data-inertia data-inertia-reveal data-delay="200">
+            <div class="column is-7 has-background-info card p-0">
+              <div class="is-flex flex-column is-full-height section p-0" style="min-height: 600px">
+                <div class="tile is-ancestor has-padding-bottom-30 is-flex-mobile" style="padding: 3rem">
+                  <div class="tile is-parent is-flex-mobile" data-inertia data-inertia-reveal data-delay="200">
                       <div class="tile is-child box" style="background-image: url({!!get_field('hero-img-1', 'options')!!});background-size:cover"></div>
                   </div>
-                  <div class="tile is-parent is-4 is-vertical" data-inertia data-inertia-reveal data-delay="200">
-                      <div class="tile is-child box" style="background-image: url({!!get_field('hero-img-2', 'options')!!});background-size:cover"></div>
-                      <div class="tile is-child box" style="background-image: url({!!get_field('hero-img-3', 'options')!!});background-size:cover"></div>
+                  <div class="tile is-parent is-4 is-vertical is-flex-mobile" data-inertia data-inertia-reveal data-delay="200">
+                      <div class="tile is-child box is-full-height" style="background-image: url({!!get_field('hero-img-2', 'options')!!});background-size:cover"></div>
+                      <div class="tile is-child box is-full-height" style="background-image: url({!!get_field('hero-img-3', 'options')!!});background-size:cover"></div>
                   </div>
                 </div>
-                <div class="carrusel splide">
-                    <div class="is-flex">
-                      <div class="button is-rounded is-borderless is-danger">{!!get_field('hero-content-1', 'options')!!}</div>
-                      <div class="button is-rounded is-borderless is-primary">{!!get_field('hero-content-2', 'options')!!}</div>
-                      <div class="button is-rounded is-borderless is-success">{!!get_field('hero-content-3', 'options')!!}</div>
-                      <div class="button is-rounded is-borderless is-grey">{!!get_field('hero-content-4', 'options')!!}</div>
+                <div class="carrusel-container splide">
+                    <div class="carrusel is-flex">
+                      <div class="carrusel-box button is-rounded is-borderless is-danger">{!!get_field('hero-content-1', 'options')!!}</div>
+                      <div class="carrusel-box button is-rounded is-borderless is-primary">{!!get_field('hero-content-2', 'options')!!}</div>
+                      <div class="carrusel-box button is-rounded is-borderless is-success">{!!get_field('hero-content-3', 'options')!!}</div>
+                      <div class="carrusel-box button is-rounded is-borderless is-grey">{!!get_field('hero-content-4', 'options')!!}</div>
+                      <div class="carrusel-box button is-rounded is-borderless is-danger">{!!get_field('hero-content-1', 'options')!!}</div>
+                      <div class="carrusel-box button is-rounded is-borderless is-primary">{!!get_field('hero-content-2', 'options')!!}</div>
+                      <div class="carrusel-box button is-rounded is-borderless is-success">{!!get_field('hero-content-3', 'options')!!}</div>
+                      <div class="carrusel-box button is-rounded is-borderless is-grey">{!!get_field('hero-content-4', 'options')!!}</div>
                     </div>
                 </div>
               </div>
             </div>
+            <script>
+              const slider = document.querySelector('.carrusel');
+              let sliderSection = document.querySelectorAll('.carrusel-box');
+              let sliderSectionLast = sliderSection[sliderSection.length -1];
+
+              slider.insertAdjacentElement('afterbegin', sliderSectionLast);
+              function Next(){
+                let sliderSectionFirst = document.querySelectorAll('.carrusel-box')[0];
+                slider.style.transform = 'translateX(-37.5%)';
+                slider.style.transition = 'all 1s';
+                setTimeout(() => {
+                  slider.style.transition = 'none';
+                  slider.insertAdjacentElement('beforeend', sliderSectionFirst);
+                  slider.style.transform = 'translateX(-25%)';
+                }, 2000);
+                
+              }
+              setInterval(function(){
+                Next();
+              }, 2200);
+            </script>
             <div class="column is-12 has-background-light card">
               <div class="has-padding-20">
                 <div class="navbar has-padding-20">

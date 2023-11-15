@@ -81,6 +81,21 @@ a {
   }
 }
 
+.carrusel-container{
+  overflow: hidden;
+  width: auto;
+  padding-bottom: 3rem;
+  .carrusel{
+    width: 200%;
+    transform: translateX(-25%);
+    .carrusel-box{
+      width: 25%;
+      height: 3.5rem;
+    }
+  }
+}
+
+
 .minibox{
   position: absolute;
   border-radius: 50px;
@@ -129,7 +144,14 @@ a {
     transform: rotate(360deg);
   }
 }
-
+.destacados{
+  .card-box{
+    min-height: 80vh;
+    .section{
+      height: 40%;
+    }
+  }
+}
 .equipamiento{
   .card{
     overflow: hidden;

@@ -4,21 +4,18 @@
 x-data="{
     id: {{$product->get_id()}},
     added: false,
-    text: '{{__('Add to Cart', 'sage')}}'
+    text: '{{__('Añadir a cotizacion', 'sage')}}'
 }" >
     <div class="column is-half">
         <a x-on:click="() => {$store.cart.add(id, $event.target); added = true; text = '{{__('Product Added', 'sage')}}'}" class="add-to-cart button is-nude has-text-dark">
             <span :class="{'is-hidden' : !added}" class="icon" >@feather('check')</span>
-            <span :class="{'is-hidden' : added}" class="icon">@feather('shopping-cart')</span>
+            <span :class="{'is-hidden' : added}" class="icon">@feather('file-text')</span>
             <span class="has-margin-left-10 is-size-6" x-text="text"></span>
-        </a> 
+        </a>
     </div>
    <div class="column is-half has-text-right">
-    <a x-on:click="" class="button is-nude" data-tooltip="comming soon">
-        @feather('gift')
-    </a>
-    <a x-on:click="" class="button is-nude" data-tooltip="comming soon">
-        @feather('heart')
+    <a x-show="added == true" href="/carrito" class="button is-nude has-text-dark" data-tooltip="Ver cotización">
+        <span class="icon is-size-6">@feather('file-text')</span>
     </a>
     <a x-on:click="() => {$store.share.share('@title', '@permalink')}" class="button is-nude">
         @feather('share')
