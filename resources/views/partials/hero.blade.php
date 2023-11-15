@@ -32,35 +32,14 @@
                 </div>
               </div>
             </div>
-            <script>
-              const slider = document.querySelector('.carrusel');
-              let sliderSection = document.querySelectorAll('.carrusel-box');
-              let sliderSectionLast = sliderSection[sliderSection.length -1];
-
-              slider.insertAdjacentElement('afterbegin', sliderSectionLast);
-              function Next(){
-                let sliderSectionFirst = document.querySelectorAll('.carrusel-box')[0];
-                slider.style.transform = 'translateX(-37.5%)';
-                slider.style.transition = 'all 1s';
-                setTimeout(() => {
-                  slider.style.transition = 'none';
-                  slider.insertAdjacentElement('beforeend', sliderSectionFirst);
-                  slider.style.transform = 'translateX(-25%)';
-                }, 2000);
-                
-              }
-              setInterval(function(){
-                Next();
-              }, 2200);
-            </script>
             <div class="column is-12 has-background-light card">
               <div class="has-padding-20">
                 <div class="navbar has-padding-20">
                   <div class="navbar-start">
-                    <div class="navbar-item is-size-6 button is-borderless"><a class="is-flex is-align-items-center" href="http://tecnodidactic.test/tienda"><i class="has-margin-right-10" data-feather="circle" width="16px" height="16px"></i>Explorar todo</a></div>
+                    <div class="navbar-item is-size-6 button is-borderless"><a class="is-flex is-align-items-center" href="{{home_url('/tienda')}}"><i class="has-margin-right-10" data-feather="circle" width="16px" height="16px"></i>Explorar todo</a></div>
                   </div>
                   <div class="navbar-end">
-                    <div class="navbar-item is-size-6 button is-borderless">Cotización<div><i class="has-margin-left-5" data-feather="file-text" width="16px" height="16px"></i></div></div>
+                    <div class="navbar-item is-size-6 button is-borderless"><a class="is-flex is-align-items-center" href="{{home_url('/cotizacion')}}"><div>Cotización<i class="has-margin-left-5" data-feather="file-text" width="16px" height="16px"></i></a></div></div>
                   </div>
                 </div>
                 <div class="columns has-padding-20">
