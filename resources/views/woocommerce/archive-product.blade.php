@@ -28,31 +28,24 @@ the readme will list any important changes.
         <div class="woocomerce-title has-text-centered has-padding-bottom-40">
           <h1 class="title is-size-1 has-text-weight-bold">Equipamiento tecnológico y sistemas de entrenamiento</h1>
         </div>
+          @include('forms.search')
+        <ul class="is-flex woocommerce-explorer is-justify-content-center wrap">
+          @action('top_level_product_categories_list')
+          @set($terms, get_terms([
+            'taxonomy' => 'product_cat',
+            'hide_empty' => false,
+          ]))
         
-            @include('forms.search')
-
-        <ul class="is-flex woocomerce-explorer is-justify-content-center">
-          @php
-          do_action('top_level_product_categories_list');
-          $terms = get_terms( array(
-              'taxonomy' => 'product_cat',
-              'hide_empty' => false,
-          ) );
-            // echo '<ul>';
-            foreach ( $terms as $term ) {
-              if ($term->name === 'Sin categorizar') {
-                $term->name = 'Todo';
-              }
-              echo '<li class="button is-rounded is-borderless"><a href="' . esc_url( get_term_link( $term ) ) . '">' . $term->name . '</a></li>';
-            }
-            // echo '</ul>';
-          @endphp
-          {{-- @if($product)
-            <li class="button is-rounded is-borderless">@productcat($product->get_id())</li>
-          @else
-            <li class="button is-rounded is-borderless">Todo</li>            
-          @endif --}}
+          @foreach ($terms as $term)
+          @set($permalink, esc_url( get_term_link( $term ) ))
+          <li class="button is-rounded is-borderless">
+            <a href="{{$permalink}}">
+              {{$term->name === 'Sin categorizar' ? 'Todo' : $term->name}}
+            </a>
+          </li>
+          @endforeach
         </ul>
+        
       </div>
     </div>
   </div>
@@ -78,13 +71,21 @@ the readme will list any important changes.
     </div>
   @endif
   
-
+  
   @if(wc_get_loop_prop('total'))
     <div class="container" data-cursor-text="scroll">
       <div class="columns is-multiline" data-inertia data-inertia-delay data-inertia-delay="200">
-        @while(have_posts())
+        @php
+        $args = array(
+          'post_type' => 'product',
+          'post_status' => 'publish',
+          'paged' => get_query_var('paged'), 
+          'posts_per_page' => 12); 
+        $loop = new WP_Query($args);
+        @endphp
+        @while($loop->have_posts())
           @php
-            the_post();
+            $loop->the_post();
             do_action('woocommerce_shop_loop');
           @endphp
           @global($product)
@@ -111,13 +112,4 @@ the readme will list any important changes.
   do_action('get_footer', 'shop');
 @endphp
 
-{{-- @include('partials.billboard-list', [
-    'billboards' => get_field('billboards_section_1', 81)
-    ])
-
-@include('partials.product-slideshow', [
-    'title' => __('<b>Productos en esta categoria</b>'),
-    'tags' => [],
-    'category' => '',
-    ]) --}}
 @endsection

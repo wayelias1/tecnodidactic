@@ -32,7 +32,7 @@
                 </div>
               </div>
             </div>
-            <div class="column is-12 has-background-light card">
+            <div class="column is-12 has-background-light card" style="box-shadow: none">
               <div class="has-padding-20">
                 <div class="navbar has-padding-20">
                   <div class="navbar-start">
@@ -43,6 +43,19 @@
                   </div>
                 </div>
                 <div class="columns has-padding-20">
+                  {{-- @php
+                  do_action('top_level_product_categories_list');
+                  $terms = get_terms( array(
+                      'taxonomy' => 'product_cat',
+                      'hide_empty' => false,
+                  ) );
+                    foreach ( $terms as $term ) {
+                      if ($term->name === 'Sin categorizar') {
+                        $term->name = 'Todo';
+                      }
+                      echo '<li class="button is-rounded is-borderless"><a href="' . esc_url( get_term_link( $term ) ) . '">' . $term->name . '</a></li>';
+                    }
+                  @endphp --}}
                   <div class="column is-3">
                     <div class="is-flex is-align-items-center">
                       <figure class="is-half-width" data-inertia data-inertia-reveal data-delay="200">

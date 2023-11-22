@@ -69,6 +69,10 @@ a {
   }
 }
 
+#logo{
+  height: 4rem;
+}
+
 .navbar-item {
   a{
   color: $dark;
@@ -94,7 +98,6 @@ a {
     }
   }
 }
-
 
 .minibox{
   position: absolute;
@@ -144,6 +147,7 @@ a {
     transform: rotate(360deg);
   }
 }
+
 .destacados{
   .card-box{
     min-height: 80vh;
@@ -152,6 +156,7 @@ a {
     }
   }
 }
+
 .equipamiento{
   .card{
     overflow: hidden;
@@ -190,9 +195,9 @@ a {
         color: $dark;
       }
     }
-    .woocomerce-explorer{
+    .woocommerce-explorer{
       margin: 0 auto;
-      .button{
+      li{
         background-color: transparent;
         a{
           color: $dark;
@@ -205,5 +210,49 @@ a {
         }
       }
     }
+  }
+}
+
+.product-card{
+  figure{
+    justify-content: center;
+  }
+}
+
+.woocommerce-pagination{
+  .page-numbers{
+    justify-content: center;
+    li{
+      a{
+        color: $info;
+      }
+      a:hover{
+        color: $primary;
+        background-color: $light;
+      }
+      .current{
+        border-radius: 4px;
+        padding: calc(0.5em - 2px) calc(0.75em - 2px);
+      }
+    }
+  }
+}
+
+.cotizacion{
+  .table-products{
+    border-radius: 20px 20px 0 0;
+    box-shadow: none;
+    overflow: hidden;
+    margin-bottom: 0;
+    .input-quantity{
+      border: 1px solid $grey-lighter;
+      width: 4rem !important;
+    }
+  }
+  .table-total{
+    border: 1px solid $grey-lighter;
+    padding: 2rem;
+    border-radius: 0 0 20px 20px;
+    background-color: $light;
   }
 }

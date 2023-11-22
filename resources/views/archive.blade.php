@@ -9,7 +9,7 @@
       @include('components.404')
       @else 
         <div class="container has-text-centered">
-          <div class="card-content  has-margin-top-100 has-margin-bottom-100">
+          <div class="card-content has-margin-top-100 has-margin-bottom-100">
             <h2 class="title is-2 has-text-uppercase">@title</h2>
             <p class="has-margin-top-30">@excerpt</p>
           </div>

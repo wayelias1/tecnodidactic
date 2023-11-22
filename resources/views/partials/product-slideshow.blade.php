@@ -13,7 +13,7 @@
 >
     <div class="carousel-wrapper columns is-mobile">
         @posts
-            <div class="column is-3 carousel-item" data-width="28vw" data-cursor-text="Drag">
+            <div class="column is-3 carousel-item" data-width="28vw" data-cursor-text="Drag" style="width: 100%">
                 @set($product , get_the_ID())
                 <x-product-card :product="$product"/>
             </div>

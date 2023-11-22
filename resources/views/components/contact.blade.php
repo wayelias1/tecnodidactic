@@ -6,7 +6,7 @@
                     <div class="column is-6">
                         <div class="is-two-thirds-width">
                             <h3 class="title is-size-1 has-text-info"><b>Ponte en contacto con uno de nuestros asesores</b></h3>
-                            <div class="is-flex is-align-items-center">
+                            <div class="is-flex is-align-items-center flex-column-mobile">
                                 <a href="mailto:contacto@tecnodidactic.cl" class="button is-info is-rounded is-half-width is-justify-content-space-around">
                                     <span class="icon">
                                         <i data-feather="mail"></i>

@@ -10,11 +10,11 @@
   @set($categories, get_the_terms($product->get_id(),'product_cat'))
   
   <div class="columns is-relative">
-    <div class="column is-two-thirds">
+    <div class="column is-half">
       <div class="columns is-multiline gallery">
         @foreach ($gallery as $image)
         <div class="column is-half gallery-image-container">
-          <div class="product-card box has-background-light is-shadowless">
+          <div class="product-card box has-background-light is-shadowless is-flex justify-center is-full-height">
             <img src="{{$image}}" alt="">
           </div>
         </div>
@@ -25,7 +25,7 @@
               @set($color, get_field('colors_per_category', 'product_cat_'.$cat->term_id))
               @set($categoria, $cat->name)
                 <span class="is-size-6 tag is-rounded {{$color}}">
-                  <b><a class="has-text-light" href="/categoria-producto/{{$cat->slug}}">{{$cat->name}}</a></b>
+                  <b><a class="has-text-dark" href="/categoria-producto/{{$cat->slug}}">{{$cat->name}}</a></b>
                 </span><br>
             @endif
           @endforeach
@@ -33,9 +33,9 @@
     <div class="column">
       <div class="content" style="position: sticky; top: 120px; bottom: 40px;">
         @action('woocommerce_before_main_content')
-        <h1 class="title is-1 has-text-weight-bold">
+        <h3 class="title is-size-3 has-text-weight-bold">
           @title
-        </h1>
+        </h3>
         <p>
           @excerpt
         </p>
