@@ -53,7 +53,7 @@ the readme will list any important changes.
 
 @if(woocommerce_product_loop())
   @if(apply_filters('woocommerce_show_page_title', true))
-    <div class="container has-margin-top-140 has-margin-bottom-50">
+    <div class="container has-margin-bottom-60">
       <div class="columns">
         {{-- <div class="column is-half">
           <h1 data-inertia data-inertia-reveal class="title is-5">
@@ -73,7 +73,7 @@ the readme will list any important changes.
   
   
   @if(wc_get_loop_prop('total'))
-    <div class="container" data-cursor-text="scroll">
+    <div class="container has-padding-20-touch" data-cursor-text="scroll">
       <div class="columns is-multiline" data-inertia data-inertia-delay data-inertia-delay="200">
         @php
         $args = array(

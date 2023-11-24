@@ -17,7 +17,7 @@
           <img class="product-image" src="@thumbnail('full', false)" alt="@title">
         </figure>
       @endif
-      <div class="is-overlay has-padding-30 has-text-right">
+      <div class="is-overlay has-padding-30 has-text-right" style="background: none">
         <a data-cursor="-hidden" data-cursor-text=" " class="button eye is-large is-rounded is-white" href="@permalink">
           <span class="icon is-small">@feather('maximize-2')</span>
         </a>
@@ -35,10 +35,8 @@
             @foreach ($categories as $cat)
               @if($cat->name !== 'Sin categorizar')
                 @set($color, get_field('colors_per_category', 'product_cat_'.$cat->term_id))
-                  <span class="is-size-6 tag is-rounded {{$color}}">
-                      <b>
-                        <a href="/categoria-producto/{{$cat->slug}}">{{$cat->name}}</a>
-                    </b>
+                  <span class="is-size-6 tag is-rounded {{$color}} is-light">
+                    <a href="/categoria-producto/{{$cat->slug}}">{{$cat->name}}</a>
                   </span><br>
               @endif
             @endforeach

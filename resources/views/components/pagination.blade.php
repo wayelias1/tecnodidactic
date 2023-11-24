@@ -7,7 +7,7 @@
         aria-label="Previous Page"
         class="border rounded-sm mr-3 py-1 px-4 hover:bg-blue-600 hover:text-white"
       >
-        <span aria-hidden="true">&larr; Previous</span>
+        <span aria-hidden="true">&lt; Previous</span>
       </a>
     @endif
 
@@ -46,7 +46,7 @@
         aria-label="Next Page"
         class="border rounded-sm mr-3 py-1 px-4 hover:bg-blue-600 hover:text-white"
       >
-        <span aria-hidden="true">Next &rarr;</span>
+        <span aria-hidden="true">Next &gt;</span>
       </a>
     @endif
   </nav>

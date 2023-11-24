@@ -34,6 +34,7 @@ export default {
     })
     window.inertia.setup.transitions = Transitions;
     window.inertia.init(window.inertia.setup);
+
     const slider = document.querySelector('.carrusel');
       let sliderSection = document.querySelectorAll('.carrusel-box');
       if(slider && sliderSection.length > 0){
@@ -54,6 +55,15 @@ export default {
           Next();
         }, 2200);
       }
+    
+    const prevbutton = document.querySelector('.prev');
+    if(prevbutton){
+      prevbutton.innerHTML = '<';
+    }
+    const nextbutton = document.querySelector('.next');
+    if(nextbutton){
+      nextbutton.innerHTML = '>';
+    }
   },
 };
   

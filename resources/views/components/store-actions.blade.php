@@ -15,19 +15,12 @@ x-data="{
     </div>
    <div class="column is-7 has-text-right">
     <span x-show="added == true" data-tooltip="Ver cotización">
-        <a href="/cotizacion" class="button is-nude has-text-dark has-padding-right-40">
-            <span class="icon is-size-6">@feather('file-text')<span>Cotización</span></span>
+        <a href="/cotizacion" class="button is-nude has-text-dark has-padding-left-60 has-padding-right-40 has-margin-right-30">
+            <span class="icon is-size-6">@feather('file-text')<span>Ver Cotización</span></span>
         </a>
     </span>
     <a x-on:click="() => {$store.share.share('@title', '@permalink')}" class="button is-nude">
         @feather('share')
     </a>
    </div>
-   {{-- <div class="column is-9" x-show="added == true" data-tooltip="Ver cotización">
-        <div>
-            <a href="/cotizacion" class="button is-nude has-text-dark">
-                <span class="icon is-size-6">@feather('file-text')<span>Cotización</span></span>
-            </a>
-        </div>
-   </div> --}}
 </store-actions>

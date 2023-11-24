@@ -6,13 +6,13 @@
         <div class="level is-paddingless">
           <div class="level-left" data-aos="fade-up">
             <div class="is-flex is-align-items-center has-margin-right-30">
-              <span class="icon is-large">
+              <span class="icon is-large has-margin-right-10">
                 <i data-feather="mail"></i>
               </span>
               <span class="mail">contacto@tecnodidactic.cl</span>
             </div>
             <div class="is-flex is-align-items-center">
-              <span class="icon is-large">
+              <span class="icon is-large has-margin-right-10">
                 <i data-feather="phone"></i>
               </span>
               <span class="telefono">+1 555 55 55</span>

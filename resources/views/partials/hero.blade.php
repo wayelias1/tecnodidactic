@@ -1,6 +1,6 @@
 <div class="hero is-fullheight">
     <div class="hero-body is-align-items-flex-start">
-        <div class="container">
+        <div class="container has-padding-20-touch">
           <div class="columns is-multiline" data-inertia data-inertia-reveal data-delay="200">
             <div class="column is-5 has-background-primary card">
               <div class="section is-medium m-0">
@@ -20,42 +20,29 @@
                 </div>
                 <div class="carrusel-container splide">
                     <div class="carrusel is-flex">
-                      <div class="carrusel-box button is-rounded is-borderless is-danger">{!!get_field('hero-content-1', 'options')!!}</div>
-                      <div class="carrusel-box button is-rounded is-borderless is-primary">{!!get_field('hero-content-2', 'options')!!}</div>
-                      <div class="carrusel-box button is-rounded is-borderless is-success">{!!get_field('hero-content-3', 'options')!!}</div>
-                      <div class="carrusel-box button is-rounded is-borderless is-grey">{!!get_field('hero-content-4', 'options')!!}</div>
-                      <div class="carrusel-box button is-rounded is-borderless is-danger">{!!get_field('hero-content-1', 'options')!!}</div>
-                      <div class="carrusel-box button is-rounded is-borderless is-primary">{!!get_field('hero-content-2', 'options')!!}</div>
-                      <div class="carrusel-box button is-rounded is-borderless is-success">{!!get_field('hero-content-3', 'options')!!}</div>
-                      <div class="carrusel-box button is-rounded is-borderless is-grey">{!!get_field('hero-content-4', 'options')!!}</div>
+                      <div class="carrusel-box tag is-size-5 is-rounded is-danger has-text-dark">{!!get_field('hero-content-1', 'options')!!}</div>
+                      <div class="carrusel-box tag is-size-5 is-rounded is-primary">{!!get_field('hero-content-2', 'options')!!}</div>
+                      <div class="carrusel-box tag is-size-5 is-rounded is-success">{!!get_field('hero-content-3', 'options')!!}</div>
+                      <div class="carrusel-box tag is-size-5 is-rounded is-grey">{!!get_field('hero-content-4', 'options')!!}</div>
+                      <div class="carrusel-box tag is-size-5 is-rounded is-danger has-text-dark">{!!get_field('hero-content-1', 'options')!!}</div>
+                      <div class="carrusel-box tag is-size-5 is-rounded is-primary">{!!get_field('hero-content-2', 'options')!!}</div>
+                      <div class="carrusel-box tag is-size-5 is-rounded is-success">{!!get_field('hero-content-3', 'options')!!}</div>
+                      <div class="carrusel-box tag is-size-5 is-rounded is-grey">{!!get_field('hero-content-4', 'options')!!}</div>
                     </div>
                 </div>
               </div>
             </div>
-            <div class="column is-12 has-background-light card" style="box-shadow: none">
+            <div class="column is-12 has-background-light card">
               <div class="has-padding-20">
                 <div class="navbar has-padding-20">
                   <div class="navbar-start">
                     <div class="navbar-item is-size-6 button is-borderless"><a class="is-flex is-align-items-center" href="{{home_url('/tienda')}}"><i class="has-margin-right-10" data-feather="circle" width="16px" height="16px"></i>Explorar todo</a></div>
                   </div>
                   <div class="navbar-end">
-                    <div class="navbar-item is-size-6 button is-borderless"><a class="is-flex is-align-items-center" href="{{home_url('/cotizacion')}}"><div>Cotización<i class="has-margin-left-5" data-feather="file-text" width="16px" height="16px"></i></a></div></div>
+                    <div class="navbar-item is-size-6 button is-borderless"><a class="is-flex is-align-items-center" href="{{home_url('/cotizacion')}}"><div>Cotización<i class="has-margin-left-10" data-feather="file-text" width="16px" height="16px"></i></a></div></div>
                   </div>
                 </div>
                 <div class="columns has-padding-20">
-                  {{-- @php
-                  do_action('top_level_product_categories_list');
-                  $terms = get_terms( array(
-                      'taxonomy' => 'product_cat',
-                      'hide_empty' => false,
-                  ) );
-                    foreach ( $terms as $term ) {
-                      if ($term->name === 'Sin categorizar') {
-                        $term->name = 'Todo';
-                      }
-                      echo '<li class="button is-rounded is-borderless"><a href="' . esc_url( get_term_link( $term ) ) . '">' . $term->name . '</a></li>';
-                    }
-                  @endphp --}}
                   <div class="column is-3">
                     <div class="is-flex is-align-items-center">
                       <figure class="is-half-width" data-inertia data-inertia-reveal data-delay="200">

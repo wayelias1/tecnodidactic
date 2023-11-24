@@ -2,7 +2,7 @@
 
 @section('content')
 @action('get_header', 'shop')
-<div class="container has-padding-top-50 has-padding-bottom-50">
+<div class="container has-padding-top-50 has-padding-bottom-50 has-padding-20-touch">
   @while(have_posts())
   {{the_post()}}
   @global($product)
@@ -21,14 +21,14 @@
         @endforeach
       </div>
       @foreach ($categories as $cat)
-            @if($cat->name !== 'Sin categorizar')
-              @set($color, get_field('colors_per_category', 'product_cat_'.$cat->term_id))
-              @set($categoria, $cat->name)
-                <span class="is-size-6 tag is-rounded {{$color}}">
-                  <b><a class="has-text-dark" href="/categoria-producto/{{$cat->slug}}">{{$cat->name}}</a></b>
-                </span><br>
-            @endif
-          @endforeach
+        @if($cat->name !== 'Sin categorizar')
+          @set($color, get_field('colors_per_category', 'product_cat_'.$cat->term_id))
+          @set($categoria, $cat->name)
+            <span class="is-size-6 tag is-rounded {{$color}} is-light">
+              <a class="has-text-dark" href="/categoria-producto/{{$cat->slug}}">{{$cat->name}}</a>
+            </span><br>
+        @endif
+      @endforeach
     </div>
     <div class="column">
       <div class="content" style="position: sticky; top: 120px; bottom: 40px;">
