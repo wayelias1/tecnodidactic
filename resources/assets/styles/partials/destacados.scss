@@ -1,0 +1,38 @@
+.destacados{
+  .card-container{
+    overflow: hidden;
+    border-radius: 20px;
+    .card-box{
+      min-height: 80vh;
+      transition: all 0.3s;
+      .is-overlay{
+        transition: all 0.3s;
+        opacity: 0;
+      }
+      .button{
+        color: $dark;
+      }
+      &:hover{
+        transform: scale(1.05);
+        &>.is-overlay{
+          opacity: 1;
+        }
+        &>div .button{
+          color: $light;
+        }
+      }
+    }
+    .section{
+      bottom: 20rem;
+      position: relative;
+      height: 20rem;
+      .button{
+        &:hover {
+          background-color: $light;
+          color: $dark;
+          border-color: $dark;
+        }
+      }
+    }
+  }
+}

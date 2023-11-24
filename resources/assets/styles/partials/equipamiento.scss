@@ -1,0 +1,19 @@
+.equipamiento{
+    .card{
+      overflow: hidden;
+      transition: all 0.3s;
+      .is-overlay{
+        transition: all 0.3s;
+        opacity: 0.6;
+      }
+      &:hover{
+        transform: scale(1.03);
+        &> .is-overlay{
+        opacity: 1;
+        }
+      }
+    }
+    .content{
+      z-index: 2;
+    }
+  }

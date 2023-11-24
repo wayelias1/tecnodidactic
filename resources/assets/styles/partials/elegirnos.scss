@@ -1,0 +1,55 @@
+.elegirnos{
+  .info-card{
+    min-height: 300px;
+  }
+  .info-card:hover{
+    transition: all 0.3s;
+    transform: scale(1.05);
+  }
+  .double-minibox{
+    min-height: 280px; 
+    position: relative;
+      .minibox{
+        position: absolute;
+        border-radius: 50px;
+        width: 9rem;
+        text-align: center;
+        transition: all 0.3s;
+        &.box-1{
+          top: 23%;
+          left: 20%;
+          transform: rotate(340deg);
+          z-index: 2;
+        }
+        &.box-2{
+          right: 26%;
+          bottom: 33%;
+          transform: rotate(7deg);
+        }
+        &.box-3{
+          top: 21%;
+          left: 23%;
+          transform: rotate(7deg);
+          z-index: 2;
+        }
+        &.box-4{
+          right: 21%;
+          bottom: 34%;
+          transform: rotate(352deg);
+        }
+      }
+      &:hover > .minibox{
+        transition: all 0.3s;
+        transform: scale(1.05);
+        &.box-1{
+          transform: rotate(348deg);
+        }
+        &.box-2, &.box-3{
+          transform: rotate(1deg);
+        }
+        &.box-4{
+          transform: rotate(357deg);
+        }
+      }
+    }
+  }
