@@ -129,7 +129,8 @@ a {
         border: none!important;
         color: $dark;
         padding: 0.5rem 1rem !important;
-        
+        width: 40px;
+        justify-content: center!important;
       }
       a:hover{
         color: $light;

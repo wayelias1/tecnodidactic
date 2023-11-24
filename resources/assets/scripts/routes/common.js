@@ -36,20 +36,24 @@ export default {
     window.inertia.init(window.inertia.setup);
 
     const slider = document.querySelector('.carrusel');
-      let sliderSection = document.querySelectorAll('.carrusel-box');
+    let sliderSection = document.querySelectorAll('.carrusel-box');
       if(slider && sliderSection.length > 0){
         let sliderSectionLast = sliderSection[sliderSection.length -1];
   
         slider.insertAdjacentElement('afterbegin', sliderSectionLast);
         function Next(){
-          let sliderSectionFirst = document.querySelectorAll('.carrusel-box')[0];
-          slider.style.transform = 'translateX(-37.5%)';
-          slider.style.transition = 'all 1s';
-          setTimeout(() => {
-            slider.style.transition = 'none';
-            slider.insertAdjacentElement('beforeend', sliderSectionFirst);
-            slider.style.transform = 'translateX(-25%)';
-          }, 2000); 
+          if(slider){
+            let sliderSectionFirst = document.querySelectorAll('.carrusel-box')[0];
+            slider.style.transform = 'translateX(-37.5%)';
+            slider.style.transition = 'all 1s';
+            setTimeout(() => {
+              if(sliderSectionFirst){
+                slider.style.transition = 'none';
+                slider.insertAdjacentElement('beforeend', sliderSectionFirst);
+                slider.style.transform = 'translateX(-25%)';
+              }
+            }, 2000);
+          }
         }
         setInterval(function(){
           Next();
