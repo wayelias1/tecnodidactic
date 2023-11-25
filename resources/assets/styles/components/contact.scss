@@ -1,0 +1,30 @@
+.contact{
+    .section{
+        box-shadow: none;
+        .button{
+            .icon{
+                transition: none;
+                .feather{
+                    transition: none;
+                }
+            }
+        }
+        .button-email{
+            &:hover{
+                color: $link;
+                background-color: $light;
+                border-color: $link;
+            }
+        }
+        .footer-nav{
+            a{
+                color: $dark;
+                transition: all 0.3s;
+                &:hover{
+                    color: $primary;
+                }
+            }
+
+        }
+    }
+}
