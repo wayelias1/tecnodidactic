@@ -5,7 +5,7 @@
         <img class="navbar-item" id="logo" src="{!!get_field('hero-logo', 'options')!!}" alt="Tecnodidactic logo">
       </a>
     </div>
-    <div class="navbar-end">
+    <div class="navbar-end has-text-align-right">
       <button class="button is-size-6 is-dark is-rounded is-borderless has-padding-20 is-align-self-center">Contacto</button>
     </div>
   </div>
