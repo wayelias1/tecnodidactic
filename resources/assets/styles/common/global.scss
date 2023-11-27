@@ -131,6 +131,7 @@ a {
         padding: 0.5rem 1rem !important;
         width: 40px;
         justify-content: center!important;
+        transition: all 0.3s;
       }
       a:hover{
         color: $light;

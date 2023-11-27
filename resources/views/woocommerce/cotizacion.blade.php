@@ -20,10 +20,10 @@
                 <table class="table table-products  is-full-width card">
                     <thead class="has-background-primary">
                         <tr class="is-vcentered">
-                            <th class="has-text-centered product-remove"></th>
                             <th class="has-text-centered product-thumbnail" style="width: 10rem">Imagen</th>
                             <th class="has-text-centered product-name">Producto</th>
                             <th class="has-text-centered product-quantity">Cantidad</th>
+                            <th class="has-text-centered product-remove"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,33 +39,33 @@
                         @set($permalink, $product['data']->get_permalink())
                         @set($imagen, $product['data']->get_image())
                             <tr>
-                                <th class="is-vcentered has-text-centered product-remove">
-                                    <a href="{{get_remove_item_url($product['key'])}}" class="has-text-black" >X</a>
-                                </th>
                                 <td class="is-vcentered has-text-centered product-thumbnail">
                                     <a href="/producto/{{ $permalink }}" class="">{!! $imagen !!}</a>
                                 </td>
                                 <td class="is-vcentered has-text-centered product-name">
-                                    <a href="/producto/{{ $permalink }}" class="has-text-black">{{ $product['data']->get_name() }}</a>
+                                    <a href="/producto/{{ $permalink }}" class="is-size-5 has-text-black">{{ $product['data']->get_name() }}</a>
                                 </td>
                                 {{-- <td class="is-vcentered has-text-centered product-price">{{ $product['data']->get_price() }}</td> --}}
                                 <td class="is-vcentered has-text-centered product-quantity">
                                     <input class="input-quantity" name="{{$product['key']}}" type="text" value="{{ $product['quantity'] }}">
                                 </td>
                                 {{-- <td class="is-vcentered has-text-centered product-subtotal">{{ $product['line_total'] }}</td> --}}
+                                <th class="is-vcentered has-text-centered product-remove">
+                                    <a href="{{get_remove_item_url($product['key'])}}" class="has-text-black" ><i data-feather="trash-2"></i></a>
+                                </th>
                                 {{-- <input type="number" id="quantity_655d1c1a5dccf" class="input-text qty text" name="cart[5ef059938ba799aaa845e1c2e8a762bd][qty]" value="3" aria-label="Product quantity" size="4" min="0" max="" step="1" inputmode="numeric" autocomplete="off"> --}}
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
-                <table class="table table-total is-bordered is-full-width card">
+                <table class="table table-total is-full-width card">
                     <tbody>
-                        <tr class="has-padding-20">
-                            <td class="is-vcentered has-text-centered has-padding-20">
-                                <button type="submit" class="button is-rounded">Actualizar cotizacion</button>
+                        <tr class="columns has-padding-10">
+                            <td class="column is-6 is-vcentered has-text-centered has-padding-20">
+                                <button type="submit" class="button is-rounded is-size-5">Actualizar cotizacion</button>
                             </td>
-                            <td class="is-vcentered has-text-centered has-padding-20">
-                                <a href="{{home_url('/finalizar-compra')}}" class="button is-rounded is-info">Finalizar cotización</a>
+                            <td class="column is-6 is-vcentered has-text-centered has-padding-20">
+                                <a href="{{home_url('/finalizar-compra')}}" class="button is-rounded is-info is-size-5">Finalizar cotización</a>
                             </td>
                         </tr>
                     </tbody>

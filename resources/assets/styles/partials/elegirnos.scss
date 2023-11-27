@@ -40,7 +40,7 @@
       }
       &:hover > .minibox{
         transition: all 0.3s;
-        transform: scale(1.05);
+        scale: (1.05);
         &.box-1{
           transform: rotate(348deg);
         }

@@ -1,5 +1,39 @@
 .finalizar-compra{
     .page-header{
-        min-height: 25vh;
+        min-height: 25vh!important;
+        margin-bottom: -60px!important;
+        h1{
+            margin-bottom: 0!important;
+        }
+    }
+    .breadcrumbs{
+        display: none!important;
+    }
+    .woocommerce-form-coupon-toggle{
+        display: none!important;
+    }
+    #order_review{
+        table{
+            overflow: hidden;
+            border-radius: 20px;
+            thead{
+                background-color: $primary;
+            }
+            .product-total{
+                display: none!important;
+            }
+            bdi{
+                display: none!important;
+            }
+            tfoot{
+                display: none!important;
+            }
+        }
+    }
+    .select2-selection{
+        border-radius: 20px;
+    }
+    input, button{
+        border-radius: 20px!important;
     }
 }

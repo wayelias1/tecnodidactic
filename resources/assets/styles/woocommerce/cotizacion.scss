@@ -5,12 +5,12 @@
       overflow: hidden;
       margin-bottom: 0;
       .input-quantity{
-        border: 1px solid $grey-lighter;
+        margin-top: 0!important;
         width: 4rem !important;
       }
     }
     .table-total{
-      border: 1px solid $grey-lighter;
+      border-top: 1px solid $grey-lighter;
       padding: 2rem;
       border-radius: 0 0 20px 20px;
       background-color: $light;
